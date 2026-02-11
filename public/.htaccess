@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+# Handle static assets
+RewriteRule ^_expo/.+ - [L]
+RewriteRule ^favicon\.ico$ - [L]
+
+# Handle all other routes with index.html
+RewriteRule ^(.*)$ index.html [L,QSA]
